@@ -1,0 +1,156 @@
+.header{
+  background: rgba(13, 16, 23, 0.42);
+  height: auto;
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 3px 0 rgba(255, 255, 255, 0.2);
+
+}
+
+.nav ul {
+  display: flex;
+  margin:25px 50px;
+  list-style-type: none;
+  padding:0;
+  height:100%;
+
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  word-spacing: 100px;
+  font-size: 24px;
+  display: block;
+  width:175px;
+  text-align: center;
+  padding:10px 0;
+}
+
+body{
+  background: linear-gradient(to left, rgb(63, 63, 115), #325fbd, rgb(63, 63, 115));
+}
+#eventTitle{
+  font-size: 45px;
+  text-align: center;
+}
+
+.form-container {
+  color: #000000;
+
+
+  border-radius: 4px;
+  height: 1000px;
+  width: 1200px;
+  margin: auto;
+
+}
+
+.form-container addCykelrytter div input, .form-container addCykelrytter div select{
+  float: right;
+  margin-right: 2px;
+  width:500px;
+  height: 100px;
+}
+
+
+.form-container{
+  color: #000000;
+  width:55%;
+  margin: 0 auto;
+  padding:75px 50px;
+  height:auto;
+  border:2px black solid;
+}
+
+.form-container div{
+  margin-bottom:15px;
+}
+.form-container div input, .form-container div select{
+  float: right;
+  margin-right: 2px;
+  width:150px;
+  padding:2px 2px;
+
+}
+#footer{
+  float:right;
+}
+#footer input, #footer button{
+  width:150px;
+  height:35px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+#footer input:hover, #footer button:hover{
+  cursor:pointer;
+  background-color: rgb(193, 193, 193);
+}
+
+#eventTitle{
+  font-size: 45px;
+  font-family: "Times New Roman";
+}
+#cancelBtn, #deleteBtn{
+  background-color: #6d2727;
+}
+#cancelBtn a{
+  text-decoration: none;
+  color: black;
+}
+#saveBtn{
+  background-color: #c0cdec;
+}
+
+.btn-create{
+  border: none;
+  width:350px;
+  height:70px;
+  text-align: center;
+  font-size: 26px;
+  color:white;
+  background-color: rgba(0,0,0,0);
+}
+
+#table-wrap{
+  margin: auto;
+  width: 50%;
+}
+
+
+th{
+  padding: 30px;
+  font-size: 30px;
+}
+td{
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+
+}
+
+td, th{
+  font-family: "Times New Roman";
+  text-align: center;
+  color: #000000;
+}
+
+.createTable-Wrap{
+  margin:100px auto 0 auto;
+  text-align: center;
+}
+
+
+.pbAddEmployee{
+  border:none;
+  padding: 7px 10px;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  color:white;
+  width:250px;
+  height: 75px;
+  font-size:26px;
+}

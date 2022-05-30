@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tilføj cykelrytter</title>
+  <link rel="stylesheet" href="../css/mystyle.css">
+  <script defer src="../js/fetchCykelryttere.js"></script>
+  <script defer src="../js/addCykelrytter.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <nav class="nav">
+      <ul>
+        <li><a id="current" href="addCykelrytter.html">Tilføj cykelrytter</a></li>
+        <li><a href="editCykelrytter.html">Edit cykelrytter</a></li>
+        <li><a href="deleteCykelrytter.html">Slet cykelrytter</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<h3 id="eventTitle">Ny Cykelrytter</h3>
+<div class="form-container">
+  <form id="assign" action="http://localhost:8080/create/cykelrytter" method="post">
+    <div class="addCykelrytter">
+
+        <div>
+          <label>Navn:
+            <input id="navnInput" type="text" name="navn">
+          </label>
+        </div>
+        <div>
+          <label>Alder:
+            <input id="alderInput" type="text" name="alder">
+          </label>
+        </div>
+        <div>
+          <label>Land:
+            <input id="landInput" type="text" name="land">
+          </label>
+        </div>
+        <div>
+          <label>Bjergpoint:
+            <input id="bjergpointInput" type="number" name="bjergpoint">
+          </label>
+        </div>
+        <div>
+          <label>Spurtpoint:
+            <input id="spurtpointInput" type="number" name="spurtpoint">
+          </label>
+        </div>
+        <div>
+          <label>Totaltid:
+            <input id="totaltidInput" type="number" name="totalTid">
+          </label>
+        </div>
+        <div>
+          <label>Cykel hold:
+            <select id="cykelholdDropDown" name="cykelhold" required>
+              <option value="" disabled selected hidden>Vælg</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="footer">
+          <button id="saveBtn" type="submit" title="Save Cykelrytter">Save</button>
+          <button id="cancelBtn" type="reset" title="cancel">
+            <a href="alleRyttere.html">Cancel</a>
+          </button>
+        </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
