@@ -24,10 +24,10 @@ function addRow(cykelrytter) {
   cell5.innerHTML = cykelrytter.spurtpoint;
 
   let cell6 = row.insertCell(5);
-  cell6.innerHTML =cykelrytter.cykelhold.holdId;
+  cell6.innerHTML = cykelrytter.cykelhold.holdId;
 
   let cell7 = row.insertCell(6);
-  cell7.innerHTML =cykelrytter.cykelhold.holdNavn;
+  cell7.innerHTML = cykelrytter.cykelhold.holdNavn;
 
   let cell8 = row.insertCell(7);
   let pbDelete = document.createElement("input");
@@ -61,7 +61,7 @@ async function deleteRytter(cykelrytter) {
   try {
     await restDeleteRytter(cykelrytter);
 
-  } catch(error) {
+  } catch (error) {
     alert(error.message);
     console.log(error);
   }
