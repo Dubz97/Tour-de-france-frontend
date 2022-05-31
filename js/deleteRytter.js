@@ -1,5 +1,10 @@
 const tableRyttere = document.getElementById("ryttereTable");
 
+
+/**
+ * Tilføjer rows til den passende mængde af ryttere, samt delete knap ud for hver række
+ * @param cykelrytter
+ */
 function addRow(cykelrytter) {
 
   console.log("adding rows");
@@ -53,11 +58,14 @@ async function createTableFromMap() {
     addRow(rytter1);
   }
 }
-
 createTableFromMap();
 
+/**
+ * Sletter rytter vha nedenstående function
+ * @param cykelrytter
+ * @returns {Promise<void>}
+ */
 async function deleteRytter(cykelrytter) {
-
   try {
     await restDeleteRytter(cykelrytter);
 
@@ -67,6 +75,12 @@ async function deleteRytter(cykelrytter) {
   }
 }
 
+
+/**
+ * Sletter vores rytter gennem vores backend, ved hjælp af url og givent rytterId
+ * @param cykelrytter
+ * @returns {Promise<Response>}
+ */
 async function restDeleteRytter(cykelrytter) {
   const url = "http://localhost:8080/delete/cykelrytter/" + cykelrytter.rytterId;
 
@@ -77,7 +91,6 @@ async function restDeleteRytter(cykelrytter) {
     },
     body: ""
   }
-
   const response = await fetch(url, fetchOptions);
 
   if (!response.ok) {

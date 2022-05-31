@@ -4,7 +4,10 @@ const urlHold = "http://localhost:8080/cykelhold";
 const rytterMap = new Map();      //forEach loop for at hente totalTid fra alle ryttere?
 const rytterHoldMap = new Map();
 
-
+/**
+ * Fetcher alle ryttere fra vores DB
+ * @returns {Promise<void>}
+ */
 async function fetchRyttereFraDB() {
   console.log('FETCHING FROM DB');
   const promise = fetch(urlCykelrytter).then(response => response.json());
@@ -15,6 +18,10 @@ async function fetchRyttereFraDB() {
   })
 }
 
+/**
+ * Fetcher alle hold fra vores DB
+ * @returns {Promise<void>}
+ */
 async function fetchHoldFraDB() {
   console.log('FETCHING HOLD FROM DB');
   const promise = fetch(urlHold).then(response => response.json());

@@ -12,6 +12,9 @@ async function loadAsyncData() {
   createDropDown();
 }
 
+/**
+ * Opretter dropdownen med de oprettede cykelhold, så den oprettede rytter kan komme på et hold
+ */
 function createDropDown() {
   console.log(rytterHoldMap);
   rytterHoldMap.forEach((cykelhold) => {
@@ -24,33 +27,44 @@ function createDropDown() {
   )
 }
 
-
 document.addEventListener("DOMContentLoaded", createFormEvent);
 
-
-function createFormEvent() {  //create form event listener
+/**
+ * Add eventlistener to html form
+ */
+function createFormEvent() {
   const formObject = document.getElementById("assign");
   formObject.addEventListener("submit", handleCykelrytterSubmit);
 }
 
+/**
+ * Håndtere "Submit delen" af når man opretter rytteren så det kan blive oprettet i DB
+ * @param event
+ * @returns {Promise<void>}
+ */
 async function handleCykelrytterSubmit(event) {
   event.preventDefault();
 
   const form = event.currentTarget;
 
-
   try {
     const formData = new FormData(form);
-
     await insertCykelrytterInBackend(url, formData);
 
     alert(formData.get("navn") + " is created");
   } catch (error) {
     alert("Error in function handleCykelrytterSubmit " + error.message);
   }
-  window.location.href = "addCykelrytter.html";                  //Nødvendig?
+  window.location.href = "addCykelrytter.html";
 }
 
+
+/**
+ * Opretter vores JSON objekt, stringify'er den og får den "Postet/sendt"
+ * @param url
+ * @param formData
+ * @returns {Promise<Response>}
+ */
 async function insertCykelrytterInBackend(url, formData) {
   const plainFormData = Object.fromEntries(formData.entries());
   console.log(plainFormData);
